@@ -54,3 +54,22 @@ let middleName = undefined; // Undefined . why ? because we have not assigned an
 let selectedColor = null; // Null . why ? because we have explicitly assigned null to it to clear the value
 let symbol = Symbol('a'); // Symbol . why ? because it is a unique value
 
+//** Reference types */
+/**
+ * 1. Object
+ * 2. Array
+ * 3. Function
+ */
+ let person = {'firstName': firstName, 'middleName':middleName, 'lastName': lastName , 'age': 30}; // Object Literal. why ? because we have key-value pairs
+let colors = ['red', 'blue', 'green']; // Array Literal. why ? because we have square brackets
+let selectedColors = null; // Object Literal. why ? because we have assigned null to it
+let greet = function() { console.log('Hello')}; // Function Literal. why ? because we have assigned a function to it
+console.log(person);
+
+
+// Dot Notation. use this when you have a valid key
+person.firstName = 'Sunny';
+
+// Bracket Notation. use this when you have a key that is not valid or it is dynamic
+person['lastName'] = 'Notvaid';
+console.log(person.lastName);
