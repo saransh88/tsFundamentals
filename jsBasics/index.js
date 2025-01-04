@@ -62,9 +62,11 @@ let symbol = Symbol('a'); // Symbol . why ? because it is a unique value
  */
  let person = {'firstName': firstName, 'middleName':middleName, 'lastName': lastName , 'age': 30}; // Object Literal. why ? because we have key-value pairs
 let colors = ['red', 'blue', 'green']; // Array Literal. why ? because we have square brackets
-let selectedColors = null; // Object Literal. why ? because we have assigned null to it
+
 let greet = function() { console.log('Hello')}; // Function Literal. why ? because we have assigned a function to it
 console.log(person);
+
+
 
 
 // Dot Notation. use this when you have a valid key
@@ -73,3 +75,59 @@ person.firstName = 'Sunny';
 // Bracket Notation. use this when you have a key that is not valid or it is dynamic
 person['lastName'] = 'Notvaid';
 console.log(person.lastName);
+
+//**Arrays**
+let selectedColors = ['blue','yellow']; // Object Literal. why ? because we have assigned null to it
+selectedColors[2] = 'green'; // Array Literal. why ? because we have assigned a value to it
+selectedColors[2] = 'green'; // Array Literal. why ? because we have assigned a value to it
+console.log(selectedColors.length);
+
+//**Functions**
+/**
+ * 
+ * @param {*} firstName 
+ * @param {*} lastName 
+ */
+function greetUser(firstName, lastName) {
+    console.log(`Hello ${firstName} ${lastName}`);
+}
+
+/**
+ * Sunny and Vaid are arguments
+ */
+greetUser('Saransh'); // Output: Hello Sunny undefined bc default value of lastName is undefined
+greetUser('Sunny', 'Vaid'); // Output: Hello Sunny Vaid
+
+
+// Function that calculates a value
+function square(number) {
+    return number * number;
+}
+
+console.log(square(21)); // Output: 441
+
+
+//**Operators**
+let x = 10;
+let y = 3;
+
+console.log(x + y); // Output: 13
+console.log(x - y); // Output: 7
+console.log(x * y); // Output: 30
+console.log(x / y); // output: 3.3333333333333335
+console.log(x % y); // Output: 1 (Modulus) how does it work ? 10/3 = 3.3333333333333335 so 3*3 = 9 and 10-9 = 1 why is it used ? to check if a number is even or odd
+console.log(x ** y); // Output: 1000 (Exponentiation) how does it work ? 10^3 = 1000 why is it used ? to calculate the power of a number
+
+// Increment (++)
+console.log(`value of x is ${x}`); // Output: 10
+console.log(++x); // Output: 11 (Pre-increment) how does it work ? x = x + 1 . X is incremented first and then printed
+console.log(`incremented value of X is ${x}`); // Output: 11
+console.log(x++); // Output: 11 (Post-increment) how does it work ? x = x + 1. X is printed first and then incremented
+console.log(`incremented value of X is ${x}`); // Output: 12
+
+// Decrement (--)
+console.log(`value of y is ${y}`); // Output: 3
+console.log(--y); // Output: 2 (Pre-decrement) how does it work ? y = y - 1. Y is decremented first and then printed
+console.log(`pre-decremented value of y is ${y}`); // Output: 2
+console.log(y--); // Output: 2 (Post-decrement) how does it work ? y = y - 1. Y is printed first and then decremented
+console.log(`post-decremented value of y is ${y}`); // Output: 1
