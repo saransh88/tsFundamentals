@@ -115,7 +115,7 @@ console.log(x + y); // Output: 13
 console.log(x - y); // Output: 7
 console.log(x * y); // Output: 30
 console.log(x / y); // output: 3.3333333333333335
-console.log(x % y); // Output: 1 (Modulus) how does it work ? 10/3 = 3.3333333333333335 so 3*3 = 9 and 10-9 = 1 why is it used ? to check if a number is even or odd
+console.log(x % y); // Output: 1 (Modulus. Remainder of the division) how does it work ? 10/3 = 3.3333333333333335 so 3*3 = 9 and 10-9 = 1 why is it used ? to check if a number is even or odd
 console.log(x ** y); // Output: 1000 (Exponentiation) how does it work ? 10^3 = 1000 why is it used ? to calculate the power of a number
 
 // Increment (++)
@@ -131,3 +131,55 @@ console.log(--y); // Output: 2 (Pre-decrement) how does it work ? y = y - 1. Y i
 console.log(`pre-decremented value of y is ${y}`); // Output: 2
 console.log(y--); // Output: 2 (Post-decrement) how does it work ? y = y - 1. Y is printed first and then decremented
 console.log(`post-decremented value of y is ${y}`); // Output: 1
+
+let z = 10
+z += 5; // z = z + 5   (Assignment Operator)
+console.log(z); // Output: 15
+
+z -= 5; // z = z - 5   (Assignment Operator)
+console.log(z); // Output: 10
+
+z *= 5; // z = z * 5   (Assignment Operator)
+console.log(z); // Output: 50
+
+
+//## Comparison Operators##
+
+// Relational Operators
+
+let c = 1;
+console.log(c > 0); // Output: true
+console.log(c >= 1); // Output: true
+console.log(c < 1); // Output: false
+console.log(c <= 1); // Output: true
+
+// Equality Operators
+// Strict Equality (Type + Value) Always use strict equality operators 
+console.log(c === 1); // Output: true
+console.log(c !== 1); // Output: false
+
+
+// Loose Equality (Value)
+console.log(c == 1); // Output: true
+console.log('1'==1); // Output: true ? why ? because it is a loose equality operator and it only checks the value
+console.log(false==0); // Output: true ? why ? because it is a loose equality operator and it only checks the value
+
+
+//## Ternary Operator ##
+
+// If a customer has more than 100 points, 
+// they are a 'gold' customer, 
+// otherwise, they are a 'silver' customer.
+
+let points = 110;
+let type = points > 100 ? 'gold':'silver'; // what does this do  ? if points > 100 then type = 'gold' else type = 'silver'
+console.log(type); // Output: gold
+
+
+//## Logical Operators ##
+
+// Logical AND (&&)
+// Returns TRUE if both operands are TRUE
+
+console.log(true && true); // Output: true
+console.log(true && false); // Output: false
