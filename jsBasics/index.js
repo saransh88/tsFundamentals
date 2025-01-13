@@ -181,5 +181,83 @@ console.log(type); // Output: gold
 // Logical AND (&&)
 // Returns TRUE if both operands are TRUE
 
-console.log(true && true); // Output: true
-console.log(true && false); // Output: false
+let highIncome = false;
+let goodCreditScore = true;
+// what does this do  ? if highIncome and goodCreditScore are true then eligibleForLoan = true else eligibleForLoan = false
+let eligibleForLoan = highIncome && goodCreditScore; 
+console.log('Eligible',eligibleForLoan); // Output: true
+
+
+// Logical OR (||)
+// Returns TRUE if one of the operands is TRUE
+
+// what does this do  ? if highIncome or goodCreditScore is true then eligibleForLoan2 = true else eligibleForLoan2 = false
+let eligibleForLoan2 = highIncome || goodCreditScore;
+console.log('Eligible 2',eligibleForLoan2); // Output: true
+
+// NOT (!)
+// what does this do  ? if highIncome is not true then applicationRefused = true else applicationRefused = false
+let applicationRefused = !eligibleForLoan2;
+console.log(`The result of your loan application is ${applicationRefused}`);
+
+
+//## Logical Operators with Non-Boolean Values ##
+// Falsy (false) it is not just false but it is a value that is treated as false in a boolean context
+// 1. undefined
+// 2. null
+// 3. 0
+// 4. false
+// 5. ''
+// 6. NaN
+
+// Anything that is not Falsy -> Truthy
+// 1. '0'
+// 2. ' '
+// 3. []
+// 4. {}
+
+let userColor = undefined;
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor; // what does this do  ? if userColor is true then currentColor = userColor else currentColor = defaultColor
+console.log('current color falsy',currentColor); // Output: blue
+userColor = 'red';
+currentColor = userColor || defaultColor; // what does this do  ? if userColor is true then currentColor = userColor else currentColor = defaultColor
+console.log('current color truthy',currentColor); // Output: red
+
+// short-circuiting
+// if the first operand is truthy, it will return the first operand
+let userColor2 = undefined;
+let defaultColor2 = 'blue';
+let currentColor2 = userColor2 || defaultColor2; // 
+console.log('current color2 for short-circuting',currentColor2); // Output: blue
+
+//## Bitwise Operators ##
+// what is this ? it is a way to manipulate numbers in binary format
+// 1 = 00000001
+// 2 = 00000010 
+
+// Bitwise OR (|)
+console.log('Bitwise or',1 | 2); // Output: 3 (00000011) why ? because it is a bitwise OR operator and it will return 1 if either of the bits is 1
+
+// Bitwise AND (&)
+console.log('Bitwise and',1 & 0); // Output: 0 (00000000) why ? because it is a bitwise AND operator and it will return 1 if both bits are 1
+
+// Read, Write, Execute. Implementing Read, Write, Execute permission
+// 00000100
+// 00000010
+// 00000111
+
+const readPermission = 4;
+const writePermission = 2; // 00000010
+const executePermission = 1; // 00000001
+let myPermmission = 0;
+
+// With Bitwise OR (|) we can assign permission to a user and with Bitwise AND (&) we can check if a user has a permission
+myPermmission = myPermmission | readPermission | writePermission; // 00000110
+
+console.log('My permission',myPermmission);
+
+let message = 
+    (myPermmission & readPermission) ? 'yes' : 'no';
+
+    console.log(message);
